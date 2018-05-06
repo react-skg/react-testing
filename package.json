@@ -8,9 +8,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "test": "node ./e2eTests/e2eTests.js"
+    "test": "node ./e2e/test.js"
   },
-  "dependencies": {
+  "devDependencies": {
     "webdriverio": "^4.12.0"
   }
 }
