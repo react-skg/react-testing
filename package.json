@@ -1,0 +1,16 @@
+{
+  "name": "react-testing",
+  "version": "1.0.0",
+  "description": "react testing",
+  "main": "index.js",
+  "repository": "https://github.com/react-skg/react-testing.git",
+  "author": "Pavlos Koutoglou <pkoutoglou@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "node ./e2eTests/e2eTests.js"
+  },
+  "dependencies": {
+    "webdriverio": "^4.12.0"
+  }
+}
