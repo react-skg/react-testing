@@ -1,20 +1,46 @@
-﻿var webdriverio = require("webdriverio");
-var options = {
-  desiredCapabilities: {
-    browserName: "chrome"
-  }
-};
+﻿async function main() {
+  const webdriverio = require('webdriverio');
 
-webdriverio
-  .remote(options)
-  .init()
-  .url("https://testwebapp20180417085330.azurewebsites.net/")
-  .getTitle()
-  .then(function(title) {
-    console.log("Title was: " + title);
-  })
-  .pause(5000)
-  .end()
-  .catch(function(err) {
-    console.log(err);
-  });
+  // Open a Chrome browser.
+  const browserOptions = {
+      remoteHost: "http://localhost:4444",
+      desiredCapabilities: {
+          browserName: 'chrome',
+          chromeOptions: {
+              args: [
+                  'disable-infobars',
+              ]
+          }
+      }
+  };
+  const driver = webdriverio.remote(browserOptions);
+  let browser = driver.init();
+
+  try {
+
+      // Navigate the browser to the "dashboard" page.
+      await browser.url('http://localhost:3000/');
+      
+      // Pausing the page for presenation purposes.
+      await browser.pause(3000);      
+       
+      // Click on the Gotham series
+      await browser.click('h5=Gotham');
+
+      // Pausing the page for presenation purposes.
+      await browser.pause(3000);
+
+  }
+  catch (exception){
+    console.log(exception);
+  }
+  finally {
+
+      // Close the browser.
+      await browser.end();
+      
+  }
+
+}
+
+main();
