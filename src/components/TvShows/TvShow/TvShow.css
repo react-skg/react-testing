@@ -1,0 +1,55 @@
+.TvShow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.TvShow:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.TvShow-movie-container {
+  padding: 10px;
+}
+
+.TvShow-movie-container p {
+  margin: 0;
+}
+
+.TvShow-movie {
+  display: block;
+  width: 100%;
+  position: relative;
+  color: black;
+  background: white;
+  overflow: hidden;
+}
+
+.TvShow-movie:hover {
+  text-decoration: none;
+}
+
+.TvShow-movie img {
+  width: 100%;
+}
+
+.TvShow-movie-info {
+  color: black;
+}
+
+.TvShow-movie-title-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.TvShow-movie-title {
+  padding-right: 15px;
+  margin: 0;
+  font-weight: bold;
+}
+
+@media (min-width: 660px) {
+  .movie {
+    width: 50%;
+    display: inline-block;
+  }
+}
