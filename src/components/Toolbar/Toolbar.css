@@ -16,6 +16,10 @@
   margin: 0;
 }
 
+.Toolbar-input {
+  margin-right: 40px;
+}
+
 input {
   outline: medium none;
   color: black;

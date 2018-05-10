@@ -3,6 +3,7 @@ import { string, number, array } from "prop-types";
 import { Link } from "react-router-dom";
 import TvShowStars from "../TvShowStars/TvShowStars";
 import Trailer from "./Trailer";
+import Label from "../../Label/Label";
 
 import "./TvShowDetails.css";
 
@@ -70,11 +71,11 @@ class TvShowDetails extends Component {
                 alt={this.props.name}
                 className="featured_image"
               />
-              {this.renderPlayImage()}
+              {/* {this.renderPlayImage()} */}
             </div>
             <div className="TvShowDetails_content">
               <div className="TvShowDetails_content-title-wrapper">
-                <h2 className="title">{this.props.name}</h2>
+                <Label text={this.props.name} className="title" />
                 <TvShowStars
                   count={5}
                   size={30}
@@ -93,7 +94,7 @@ class TvShowDetails extends Component {
             </div>
           </div>
           <Trailer
-            show={this.state.show}
+            show={false}
             name={`${this.props.name} Trailer`}
             onHide={this.handleHide}
             youtubeId={this.props.trailerId}

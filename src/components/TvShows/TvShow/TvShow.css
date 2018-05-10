@@ -22,10 +22,11 @@
   color: black;
   background: white;
   overflow: hidden;
+  text-decoration: none !important;
 }
 
 .TvShow-movie:hover {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .TvShow-movie img {

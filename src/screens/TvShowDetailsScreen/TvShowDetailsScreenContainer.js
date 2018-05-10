@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 
-import TvShowDetailsScreen from "./TvShowDetailsScreen";
 import { asyncFetchShow, asyncFetchTrailer } from "../../state/actions";
+import TvShowDetailsScreen from "./TvShowDetailsScreen";
 
 const mapStateToProps = state => ({
   show: state.show,

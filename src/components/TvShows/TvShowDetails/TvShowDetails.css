@@ -20,13 +20,18 @@
   font-size: 18px;
 }
 
+.TvShowDetails_content_wrapper_button:hover {
+  opacity: 0.7;
+}
+
 .TvShowDetails_content_wrapper_button_link {
   color: #1ecd97;
+  text-decoration: none !important;
 }
 
 .TvShowDetails_content_wrapper_button_link:hover {
   color: #1ecd97;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .clearfix:before,

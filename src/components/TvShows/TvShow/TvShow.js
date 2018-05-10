@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import Label from "../../Label/Label";
 
 import TvShowStars from "../TvShowStars/TvShowStars";
 
@@ -20,7 +21,7 @@ class TvShow extends Component {
           <div className="TvShow-movie-container">
             <span className="TvShow-movie-info">
               <div className="TvShow-movie-title-wrapper">
-                <h5 className="TvShow-movie-title">{this.props.name}</h5>
+                <Label text={this.props.name} className="TvShow-movie-title" />
                 <TvShowStars
                   count={5}
                   size={20}
